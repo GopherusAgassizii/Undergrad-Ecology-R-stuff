@@ -1,0 +1,24 @@
+#make sure data is imported if it isn't use the following command
+# Mammalogy_Ethogram_Otter_Data <- read_excel("Mammalogy_Ethogram_Otter_Data.xls")
+
+#add extra space(2 inches hence the +2) to bottom of plot for text
+par(mar = c(5, 4, 4, 6) + 2)
+
+#plot a scatter plot
+plot(Mammalogy_Ethogram_Otter_Data$feed, Mammalogy_Ethogram_Otter_Data$groom)
+
+# plot a regression line
+# abline makes a regression line col makes color red
+abline(lm(Mammalogy_Ethogram_Otter_Data$feed~Mammalogy_Ethogram_Otter_Data$groom), col='red')
+
+#calculate correlation coefficient using command cor()
+#set variable correlation_value equal to output of cor() so we can print it later
+correlation_value <- cor(Mammalogy_Ethogram_Otter_Data$feed,Mammalogy_Ethogram_Otter_Data$groom, use = "complete.obs")
+
+#print the coefficient to the bottom of graph using mtext()
+#I could not get the R to have a subscript of two and print the coefficient unless I put it on it's own line that is why there are two mtexts
+
+mtext(side = 1, "Figure 4. Linear Regression of instances of grooming(y variable) vs instances of feeding (x variable) for the 3 otters sampled during sample four.
+There is no correlation between instances of feeding and instances of grooming.", line = 5, cex = 1.0, col = "black", font = 2)
+
+mtext(side = 1, bquote(R^2 == .(as.character(correlation_value))), line = 6, cex = 1.0, col = "black", font = 2)

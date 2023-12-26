@@ -1,0 +1,7 @@
+x <- c(9.94, 28.28, 1.43, 805.76, 56.81)
+labels <-  c("dragging", "free swimming", "feeding", "stalking", "resting", "tail grabbing")
+piepercent<- round(100*x/sum(x), 1)
+png(file = 'Seahorse_piechart_BIOE140.png')
+pie(x, labels = scales::percent(x/sum(x), suffix = "%"), main = "Seahorse activity", col = rainbow(length(x)))
+legend("topright", c("dragging", "free swimming", "feeding", "stalking", "resting"), cex = 0.8, fill = rainbow(length(x)))
+dev.off()

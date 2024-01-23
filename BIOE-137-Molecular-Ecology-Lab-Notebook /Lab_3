@@ -12,4 +12,77 @@ target in this experiment.
   example you would expect that lizards would all have regions of their genome that they would
   all have the same sequence for because they are all related. 
 
+I downloaded Geneious and moved the unkown.txt into geneious.
+
 #Q2
+How long is the sequence (in nucleotides)?
+  1551 base pairs
+
+#Q3 What is the Molecule types?
+  DNA
+
+#Q4 What do the colors indicate?
+  The type of base(AGCT)
+
+#Q5 Do coding or non-coding regions evolve more slowly
+  Coding regions evolve more slowly because more of the mutations are deleterious in coding regions so
+  natural selection would eliminate most mutations in coding regions.
+
+#Q6 What differentiates coding adn non-coding regions, other than evolutionary rate?
+  Coding regions make functional protein product whereas non-coding regions do not make functional
+  protein product.
+
+#Q7 Assuming this is a gene, do you think this is the correct translation? Why or why not?
+  I think it is not the correct translation because there is not enough information. We don't
+  see where the first protein starts and we don't see where the last protein ends(no stop codon).
+
+#Q8 Why do you think that mitochondria have a different genetic code than that of their hosts?
+  They were once bacteria that were engulfed by a eukaryotic ancestor. This would imply their code
+  would be closer to bacteria than their hosts.
+
+#Q9 What is the correct genetic code and reading frame?
+  Vertebrate mitochondrial 1 reading frame.
+
+#Q10 What have we learned so far about our mystery animal?
+  It is a vertebrate.
+
+#Q11 What archived sequence is the closest match to our unkown sequence? How close is the match (percentage-wise)?
+What is the second closest match, and how close is that match?
+  Our closest match is Balaenoptera Omurai at 99.61%. Second closest was Balaenoptera Omurai at 99.55%.
+
+#Q12 Do you get the same result from NCBI and Geneious? Hint: look at the GenBank accession number 
+  of the closest match from both searches. Why might the results be different?
+  I got the same result. The only reason I think it could be different is if the Geneious database is out of date.
+
+#Q13 What species was the gunk?
+  It was Omurai's whale. Balaenoptera Omurai.
+#Q14
+What gene did we sequence?
+  Cox 1 gene.
+
+#Q15
+What is the common name of our closest match?
+  Omurai's whale
+
+#Q16
+State one interesting fact about blue whales that you just learned
+  They are mysticetes which are baleen whales.
+
+#Q17 What are the two major sub-lineages within the cetacea, and what is the major morphological feature
+  that distinguishes them?
+  Mysticeti and odontoceti. Odontocetes have teeth whereas mysticetes have baleen.
+
+#Q18 Write the reference for the publication(including author names) that included this sequence.
+  Sasaki T, Nikaido M, Wada S, Yamada TK, Cao Y, Hasegawa M, Okada N. Balaenoptera omurai is a newly
+  discovered baleen whale that represents an ancient evolutionary lineage. 
+  Mol Phylogenet Evol. 2006 Oct;41(1):40-52. doi: 10.1016/j.ympev.2006.03.032. Epub 2006 May 16. PMID: 16843687.
+
+#Q19
+What is the main conclusion of this manuscript?
+  They conclude that a monophyletic evolutionary lineage would have Omurai as a seperate lineage from bryde's whale.
+  Omurai's sister taxa is the blue whale.
+
+#Q20
+Knowing what you know, should you be surprised that this rotten piece of flesh washed up o the beach in Santa Cruz, CA?
+  Given that trade winds can go to the north west at around 30 degrees lattitude the ocean currents could bring one that stranded 
+  there to the west coast.

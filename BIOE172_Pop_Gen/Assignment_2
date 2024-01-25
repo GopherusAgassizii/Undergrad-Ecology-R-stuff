@@ -1,1 +1,20 @@
+obs_snp1 <- c(85, 107, 30)
+obs_snp32 <- c(131, 93, 36)
+
+p_A1 <- (85 + 0.5*107)/sum(obs_snp1)
+p_A2 <- (30 + 0.5*107)/sum(obs_snp1)
+q_B1 <- (131 + 0.5*93)/sum(obs_snp32)
+q_B2 <- (36 + 0.5*93)/sum(obs_snp32)
+
+ex_A1-A1 <- p_A1^2
+ex_A1-A2 <- 2 * p_A1 * p_A2
+ex_A2_A2 <- p_A2^2
+
+ex_B1_B1 <- q_B1^2
+ex_B1_B2 <- 2 * q_B1 * q_B2
+ex_B2_B2 <- q_B2^2
+
+exSNP1 <- c(ex_A1-A1, ex_A1-A2, ex_A2_A2)
+
+expSNP34 <- c(ex_B1_B1, ex_B1_B2, ex_B2_B2)
 

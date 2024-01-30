@@ -9,6 +9,10 @@ Lab Summary:
   I downloaded the file then ran the commands given in the instructions. An issue I ran into was it couldn't read the turtles.txt files.
   I then moved turtles into the structure one and it worked. 
 
+  Everything worked up until distruct. I downloaded the turtles.names.txt file into distruct like it said but when I ran it it kept saying
+  a file exists error for the last file it was trying to create. I am not sure why. Owen edited the python script to make it work on his
+  I did not have a chance to try his version yet so I don't know if that would fix it on my 
+
 Q1 Formulate a hypothesis regarding how many populations you expect to see.
 Explain your reasoning
   After looking at how the roads bisect the Geography of California I would predict that the turtles are in 9 populations. Even though

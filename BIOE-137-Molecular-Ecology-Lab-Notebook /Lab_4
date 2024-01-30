@@ -4,6 +4,11 @@ Lab #4
 Lab Partners: Patience and Margaret
 Objective: Learn how to use computational tools for describing a populations structure
 
+Lab Summary:
+
+  I downloaded the file then ran the commands given in the instructions. An issue I ran into was it couldn't read the turtles.txt files.
+  I then moved turtles into the structure one and it worked. 
+
 Q1 Formulate a hypothesis regarding how many populations you expect to see.
 Explain your reasoning
   After looking at how the roads bisect the Geography of California I would predict that the turtles are in 9 populations. Even though
@@ -12,4 +17,29 @@ Explain your reasoning
   roads. I know from experience with desert tortoises that any time a road is placed it prevents gene flow and extirpates all the 
   tortoises in the nearby area. My groups are based on where the roads are. Any dots not disrupted by a road I count as one population. 
 
-Q2 
+Q2 Why are there two lines per individual?
+  They are Diploid! They will have a haplotype for each of their two chromosomes!
+
+Q3 What type of commonly used markers are not diploid? What ploidy are they
+  Mitochondrial DNA! It is monoploidy! Bacteria!
+
+Q4 What is HWE? What are the Assumptions of Hardy Weinberg Equilibrium?
+  Hardy Weinberg Equilibrium is when the allele frequencies of a population do not change over time. The assumptions are the population
+  is infinite(or constant depending on who you ask). There is no linkage between genes. There is no selection. There is random mating.
+  There is no gene flow(Migration). While the textbook did not include the following two factors they are absolutely needed for a 
+  population to be in Hardy Weinberg Equilibrium. There is no genetic Drift and There is no mutation.
+
+Q5 What is admixture? What does a model with no admixture assume with regards to gene flow?
+  Admixture is when distinct populations interbreed. A model with no admixture assumes zero gene flow!
+
+Q6 What is linkage? How might linkage affect the analysis?
+  Linkage is when certain alleles are non randomly inhereited together. This can be them being inherited together less than you would expect
+  or more than you would expect. This can be due to selection or distance to each other on a chromosome. Linkage could make you think a 
+  population is not in hardy weinberge equilibrium. Linkage could also help you distinguish between populations because the alleles from
+  a specific population will be associated with alleles also from that specific population. 
+
+Q7 What are allele frequencies? Do you expect allele frequencies to be the same in different populations?
+  Allele frequencies are the amount of a certain allele you would expect to see in a given sample. I would expect allele freqencies to 
+  be different between populations because of drift, selection, and founder effects.
+
+Q8

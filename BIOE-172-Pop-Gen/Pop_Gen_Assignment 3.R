@@ -62,6 +62,26 @@ chisq.test(obs_SCB, p = round(ex_SCB, digits = 3))
 chisq.test(obs_BCA, p = round(ex_BCA, digits = 2))
 chisq.test(obs_BCB, p = round(ex_BCB, digits = 4))
 
+#I also did Chi square tests for the populations using the genotype frequencies(A1A1B1B1, A1A1,B1B2, ....) rather than seperate frequencies for each locus. In both instances I got warnings that 
+#the chisq.test function may not give the right answer, so I used the formula to check it with my chi_test_SC and chi_test_BC. 
+ex_genotypes_SC <- c(SC_ex_A1A1*SC_ex_B1B1, SC_ex_A1A1*SC_ex_B1B2, SC_ex_A1A1*SC_ex_B2B2, SC_ex_A1A2*SC_ex_B1B1, SC_ex_A1A2*SC_ex_B1B2, SC_ex_A1A2*SC_ex_B2B2,
+                     SC_ex_A2A2*SC_ex_B1B1, SC_ex_A2A2*SC_ex_B1B2, SC_ex_A2A2*SC_ex_B2B2)
+ex_count_genotypes_SC <- 220*ex_genotypes_SC
+
+genotype_observed_SC <- c(southern_california_f[1],southern_california_f[2],southern_california_f[3],southern_california_f[5],southern_california_f[6],
+                          southern_california_f[7],southern_california_f[9],southern_california_f[10],southern_california_f[11])
+chi_test_SC <- sum((ex_count_genotypes_SC - genotype_observed_SC)^2/ex_count_genotypes_SC)
+chisq.test(genotype_observed_SC, p = round(ex_genotypes_SC, digits = 3))
+
+ex_genotypes_BC <- c(BC_ex_A1A1*BC_ex_B1B1, BC_ex_A1A1*BC_ex_B1B2, BC_ex_A1A1*BC_ex_B2B2, BC_ex_A1A2*BC_ex_B1B1, BC_ex_A1A2*BC_ex_B1B2, BC_ex_A1A2*BC_ex_B2B2,
+                     BC_ex_A2A2*BC_ex_B1B1, BC_ex_A2A2*BC_ex_B1B2, BC_ex_A2A2*BC_ex_B2B2)
+ex_count_genotypes_BC <- 220*ex_genotypes_BC
+
+genotype_observed_BC <- c(Central_British_Columbia_f[1],Central_British_Columbia_f[2],Central_British_Columbia_f[3],Central_British_Columbia_f[5],Central_British_Columbia_f[6],
+                          Central_British_Columbia_f[7],Central_British_Columbia_f[9],Central_British_Columbia_f[10],Central_British_Columbia_f[11])
+chi_test_BC <- sum((ex_count_genotypes_BC - genotype_observed_BC)^2/ex_count_genotypes_BC)
+chisq.test(genotype_observed_BC, p = round(ex_genotypes_BC, digits = 6))
+
 #estimate linkage disequilibrium using D = [2N11 + N12 + N21 + (N22/2)]/Ntotal - 2p1p2
 D_SC <- ((2*southern_california_f[1] + southern_california_f[5] + 
            southern_california_f[2] + 0.5*southern_california_f[6])/southern_california_f[16])- 2*p_SC_A1*p_SC_B1
@@ -86,4 +106,4 @@ matrix_exc_BC <- matrix(data = exc_BC_raw, nrow = 3, ncol = 3)
 exc_BC <- rbind(matrix_exc_BC, colSums(matrix_exc_BC))
 exc_BC_f <- cbind(exc_BC, rowSums(exc_BC))
 
-#after poring over the data there seems to be selection for double heterozygotes(4x what we would expect!) and evidence of selection against double homozygotes in this population. we would expect!) and evidence of selection against double homozygotes in this population. 
+#after poring over the data there seems to be selection for double heterozygotes(4x what we would expect!) and evidence of selection against double homozygotes in this population. 

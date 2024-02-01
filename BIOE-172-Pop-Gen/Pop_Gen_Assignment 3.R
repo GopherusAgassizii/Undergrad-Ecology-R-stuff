@@ -55,7 +55,8 @@ obs_BCA <- c(Central_British_Columbia_f[4], Central_British_Columbia_f[8], south
 obs_BCB <- c(Central_British_Columbia_f[13], Central_British_Columbia_f[14], Central_British_Columbia_f[15])
 
 #do chi square test to test for hardy Weinberg equilibrium. I checked the first one since it was saying it might not be accurate due to needing to be rounded to 6 decimals.
-#To check it I made sure to use the formula X^2 = Sum(E-O)^2/E. Because it spit out the right value I assume it is correct for the other tests too given that I used the same formula for each one
+#To check it I made sure to use the formula X^2 = Sum(E-O)^2/E. Because it spit out the right value I assume it is correct for the other tests too(they did not give a chi 
+#square may not be correct error) given that I used the same formula for each one
 check_chi <- sum((obs_SCA- 220*ex_SCA)^2/(220*ex_SCA))
 chisq.test(obs_SCA, p = round(ex_SCA, digits = 6))
 chisq.test(obs_SCB, p = round(ex_SCB, digits = 3))
@@ -75,7 +76,7 @@ chisq.test(genotype_observed_SC, p = round(ex_genotypes_SC, digits = 3))
 
 ex_genotypes_BC <- c(BC_ex_A1A1*BC_ex_B1B1, BC_ex_A1A1*BC_ex_B1B2, BC_ex_A1A1*BC_ex_B2B2, BC_ex_A1A2*BC_ex_B1B1, BC_ex_A1A2*BC_ex_B1B2, BC_ex_A1A2*BC_ex_B2B2,
                      BC_ex_A2A2*BC_ex_B1B1, BC_ex_A2A2*BC_ex_B1B2, BC_ex_A2A2*BC_ex_B2B2)
-ex_count_genotypes_BC <- 220*ex_genotypes_BC
+ex_count_genotypes_BC <- 245*ex_genotypes_BC
 
 genotype_observed_BC <- c(Central_British_Columbia_f[1],Central_British_Columbia_f[2],Central_British_Columbia_f[3],Central_British_Columbia_f[5],Central_British_Columbia_f[6],
                           Central_British_Columbia_f[7],Central_British_Columbia_f[9],Central_British_Columbia_f[10],Central_British_Columbia_f[11])

@@ -12,7 +12,7 @@ matrix_Central_British_Columbia <- matrix(data = Central_British_Columbia_raw, n
 Central_British_Columbia <- rbind(matrix_Central_British_Columbia, colSums(matrix_Central_British_Columbia))
 Central_British_Columbia_f <- cbind(Central_British_Columbia, rowSums(Central_British_Columbia))
 
-#estimate allele frequencies for socal(sc) and british columbia(bc)
+#estimate allele frequencies for socal(sc) and british columbia(bc) using p1 = A1A1 + 0.5A1A2, q1 = A2A2 + 0.5A1A2, .......
 p_SC_A1 <- (southern_california_f[4] + 0.5 *southern_california_f[8])/southern_california_f[16]
 q_SC_A2 <- (southern_california_f[12] + 0.5 *southern_california_f[8])/southern_california_f[16]
 p_SC_B1 <- (southern_california_f[13] + 0.5 *southern_california_f[14])/southern_california_f[16]
@@ -23,7 +23,7 @@ q_BC_A2 <- (Central_British_Columbia_f[12] + 0.5 *Central_British_Columbia_f[8])
 p_BC_B1 <- (Central_British_Columbia_f[13] + 0.5 *Central_British_Columbia_f[14])/Central_British_Columbia_f[16]
 q_BC_B2 <- (Central_British_Columbia_f[15] + 0.5 *Central_British_Columbia_f[14])/Central_British_Columbia_f[16]
 
-#make expected frequencies
+#make expected frequencies using homozygote = p^2 or q^2 and heterozygote = 2pq
 
 SC_ex_A1A1 <- p_SC_A1^2
 SC_ex_A1A2 <- 2*(p_SC_A1 * q_SC_A2)
@@ -55,13 +55,14 @@ obs_BCA <- c(Central_British_Columbia_f[4], Central_British_Columbia_f[8], south
 obs_BCB <- c(Central_British_Columbia_f[13], Central_British_Columbia_f[14], Central_British_Columbia_f[15])
 
 #do chi square test to test for hardy Weinberg equilibrium. I checked the first one since it was saying it might not be accurate due to needing to be rounded to 6 decimals.
+#To check it I made sure to use the formula X^2 = Sum(E-O)^2/E. Because it spit out the right value I assume it is correct for the other tests too given that I used the same formula for each one
 check_chi <- sum((obs_SCA- 220*ex_SCA)^2/(220*ex_SCA))
 chisq.test(obs_SCA, p = round(ex_SCA, digits = 6))
 chisq.test(obs_SCB, p = round(ex_SCB, digits = 3))
 chisq.test(obs_BCA, p = round(ex_BCA, digits = 2))
 chisq.test(obs_BCB, p = round(ex_BCB, digits = 4))
 
-#estimate linkage disequilibrium 
+#estimate linkage disequilibrium using D = [2N11 + N12 + N21 + (N22/2)]/Ntotal - 2p1p2
 D_SC <- ((2*southern_california_f[1] + southern_california_f[5] + 
            southern_california_f[2] + 0.5*southern_california_f[6])/southern_california_f[16])- 2*p_SC_A1*p_SC_B1
 
@@ -85,6 +86,4 @@ matrix_exc_BC <- matrix(data = exc_BC_raw, nrow = 3, ncol = 3)
 exc_BC <- rbind(matrix_exc_BC, colSums(matrix_exc_BC))
 exc_BC_f <- cbind(exc_BC, rowSums(exc_BC))
 
-comparison_BC = (Central_British_Columbia_f-0.01)/exc_BC_f
-
-#after poring over the data there seems to be incredibly strong selection for double heterozygotes(4x what we would expect!) and evidence of selection against double homozygotes in this population. 
+#after poring over the data there seems to be selection for double heterozygotes(4x what we would expect!) and evidence of selection against double homozygotes in this population. we would expect!) and evidence of selection against double homozygotes in this population. 

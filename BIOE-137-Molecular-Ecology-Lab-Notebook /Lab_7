@@ -1,0 +1,23 @@
+Keaton Wood
+February 20th, 2024
+Lab #7
+Lab Partners: Patience
+Lab Objective: Familiarize yourself with how to build a mitochondrial genome in linux
+
+Step 1: We familiarized ourselves with how to use linux commands. I created a file in my personal directory called Bioe137 to store this in
+
+Step 2: Downloaded the NOVOPlasty zip file in order to use that program for creating our genome.
+  I downloaded it from this link https://github.com/ndierckx/NOVOPlasty To note I pressed the green code button and copied link address
+  to the zip file. I did not just press the copy to clipboard button. I then used command wget followed by the link.
+
+Step 3: unzip the NOVOPlasty by using command "unzip master.zip"
+
+Step 4: change directories into Novoplasty-master by command "cd Novoplasty-master". I then moved to test datasets with "cd Test\ datasets/"
+Change directories to mito assembly with "cd Mitochondrial\ assembly/"
+
+Step 5: unzip the .gz files with command "gunzip Homo_sapiens_R2.fasta.gz" and "gunzip Homo_sapiens_R1.fasta.gz"
+
+Step 6: Change the files in the config file to match our newly unzipped files. Used command "nano config_mito_test.txt" Then I deleted the
+.gz at the end of Homo_sapiens_R1.fasta.gz and Homo_sapiens_R2.fasta.gz 
+
+Step 7: Run the Novoplasty with command "perl ../../NOVOPlasty4.3.5.pl -c config_mito_test.txt"

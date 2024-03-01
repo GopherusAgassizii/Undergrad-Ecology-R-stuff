@@ -1,0 +1,34 @@
+Keaton Wood
+February 29, 2024
+Lab #8
+Lab Partners: Owen, Melinas, Yixiao
+
+Goal: do qpcr on Elodea samples
+We were group 3 and had the dilution of elodea.
+
+Step 1: Make Mix for 18 PCR wells. We make enough for 19 to account for error.
+Formula:
+DNA - 5 microliters 
+Master Mix - 12.5 microliters x 19 = 237.5 microliters
+Probe - 1 microliters x 19 = 19 microliters
+H20 - 6.5 microliters x 19 = 123.5 microliters
+
+236.5 + 19 + 123.5 = 380 microliters
+
+Step 2: put the mix and DNA into tubes. 
+3 wells at a time so each tube should have (20 from mix x 3) + (5 DNA x 3) = 75 microliters of mix and DNA
+
+Step 3: make dilutions for DNA.
+  We added 20 microliters of DNA in the first tube. Took 2 from it and added to the next along with 18 microliters water. Repeated this step twice.
+  After this we had a concentration of 1, 1/10, 1/100, 1/1000
+
+Step 4: add aquatic meta environment and water into remaining two tubes
+we added 15 microliters aquatic metaenvironment in one tube and 15 microliters water in another tube.
+Our pipettes were definetly off and we were under for the 1/100th dilution & water & aquatic metaenvironment
+
+*note: We vortexed each time we added DNA to the mix.
+
+Step 5: Pipette into PCR wells.
+We pipetted 25 microliters into each well. We started at the last column were we added sample of 1 concentration, then another sample 1 concentration under it, then again under that one. We then moved
+to the next column and did the same for 1/10th concentration. Repeated this step for 1/100th, 1/1000th, water, and aquatic metaenvironment.
+

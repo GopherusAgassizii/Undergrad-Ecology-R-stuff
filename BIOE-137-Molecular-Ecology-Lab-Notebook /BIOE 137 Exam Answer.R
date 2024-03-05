@@ -48,4 +48,4 @@ FIT <- (Ht - HI)/Ht
 
 #Calculate FIS using (Hs - HI)/Hs
 
-FIS <- (HS - HI)/HI
+FIS <- (HS - HI)/HS

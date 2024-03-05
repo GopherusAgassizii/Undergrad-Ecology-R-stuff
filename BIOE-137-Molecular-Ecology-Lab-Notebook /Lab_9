@@ -1,0 +1,27 @@
+Keaton Wood
+March 5th, 2024
+Lab #9
+Lab Partners: Anne, Gwen
+Lab Objective: assemble data from species to make a tree for project
+
+Notes: We had to use public data because the qpcr did not work. We went on ncbi and looked under nucleotides for green crab
+filtered for mitochondria. We used the first sequence that popped up. 
+
+Step 1: Downloaded the NOVOPlasty zip file in order to use that program for creating our genome.
+  I downloaded it from this link https://github.com/ndierckx/NOVOPlasty To note I pressed the green code button and copied link address
+  to the zip file. I did not just press the copy to clipboard button. I then used command wget followed by the link.
+
+Step 2: unzip the NOVOPlasty by using command "unzip master.zip"
+
+Step 3: I created a directory called Greencrab to store my stuff in.
+
+Step 4: I created a config.txt file by copying the config.txt file from https://github.com/ndierckx/NOVOPlasty.
+
+step 5: I created symbolic links to the .q files using ln -s. 
+
+step 6: I made a fasta file by getting a mitochondrial sequence from NCBI.
+
+Step 6: I edited the config.txt file by adding in the paths to my symbolic links and putting the name of the fasta file for inputs. I
+deleted chloroplast section. 
+
+Step 7: Run the Novoplasty with command "perl /NOVOPlasty4.3.5.pl -c config.txt"

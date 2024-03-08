@@ -25,3 +25,5 @@ Step 6: I edited the config.txt file by adding in the paths to my symbolic links
 deleted chloroplast section. 
 
 Step 7: Run the Novoplasty with command "perl /NOVOPlasty4.3.5.pl -c config.txt"
+
+Update: Found out on Thursday that Patience and her group that was working on green crab got their file to run completely. Mine was still runnning when I left lab. 

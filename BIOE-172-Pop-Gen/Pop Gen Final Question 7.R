@@ -1,7 +1,7 @@
 #Question 7 part a
 #make genotype frequencies and fitness
-p = 0.8
-q = 0.2
+p = 0.2
+q = 0.8
 AA = p^2
 Aa = 2*p*q
 aa = q^2
@@ -27,8 +27,8 @@ delta_q <- q_prime - q
 
 #bonus: repeat last steps except A is recessive now 
 #make genotype frequencies and fitness
-p = 0.8
-q = 0.2
+p = 0.2
+q = 0.8
 AA = p^2
 Aa = 2*p*q
 aa = q^2

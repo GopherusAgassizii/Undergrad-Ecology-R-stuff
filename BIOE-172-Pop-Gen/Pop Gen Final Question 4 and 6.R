@@ -39,10 +39,24 @@ FST_2 <- (H_total - He_2)/H_total
 #END OF SKIPPABLE SECTION
 
 #Question 6
-#make sequence for different values of p and q
+#make sequence for different values of p and q for frequency dependent selection
 p <- (0:10)/10
 #make equation for our line with mean fitness as our response variable
 w <- (1-p^2)*p^2 + 2*p*(1-p)*(1-2*p*(1-p)) + (1-(1-p)^2)*(1-p)^2
+
+#plot our line, make 0,0 the origin using axxs = i, yaxs = i use lwd to make a nicer line. 
+plot(p, w, type = 'l', lwd = 5, xaxs = 'i', yaxs = 'i', ylab = "w")
+
+#label each point on x axis so we can see where D is effectively zero
+axis(side = 1, at = seq(0, 1, by = 0.1))
+
+#now do the same for overdominance
+#make sequence for different values of p and q and s and t
+p <- (0:10)/10
+s <- 0.1
+t <- 0.2
+#make equation for our line with mean fitness as our response variable
+w <- (1-s)*p^2 + 2*p*(1-p) + (1-t)*(1-p)^2
 
 #plot our line, make 0,0 the origin using axxs = i, yaxs = i use lwd to make a nicer line. 
 plot(p, w, type = 'l', lwd = 5, xaxs = 'i', yaxs = 'i', ylab = "w")
